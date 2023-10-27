@@ -15,29 +15,29 @@
 
 <div class="row">
   <div class="col">
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" ><img src="static/imagens/logo.png" width="65" height="65"></a>
+        <a class="navbar-brand" ><img src="static/imagens/logocomletrabranca.png" width="65" height="65"></a>
         <div class="col">
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="cronograma.html">Programação</a>
+                <a class="nav-link active" href="{{ url_for('cronograma') }}">Programação</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="ingressos.html">Ingressos</a>
+                <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="local.html">Local</a>
+                <a class="nav-link active" href="{{ url_for('local') }}">Local</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="contato.html">Contato</a>
+                <a class="nav-link disabled" href="{{ url_for('contato') }}">Contato</a>
               </li>
             </ul>
           </div>  
@@ -46,7 +46,7 @@
             <div style="margin-right: -10px;">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
-                <button class="btn btn" type="submit"><img src="static/imagens/lupa.png" width="20" height="20"></button>
+                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20" height="20"></button>
               </form>
             </div>
           </div>
@@ -54,7 +54,7 @@
             <div style="margin-right: 40px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/17004.png" height="50" width="50"></a>
+                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png" height="50" width="50"></a>
                 </li>
               </ul>  
             </div>  
@@ -90,24 +90,18 @@
     
             <ul class="d-grid gap-4 my-5 list-unstyled small">
               <li class="d-flex gap-4">
-                <a href="https://www.instagram.com/agrocity____/" ><img src="static/imagens/instagram.png" class="bi text-body-secondary flex-shrink-0"  width="48" height="48"></a>
+                <a href="https://www.instagram.com/agrocity____/" ><img src="static/imagens/insta.png" class="bi text-body-secondary flex-shrink-0"  width="48" height="48"></a>
                 <div>
                   <h5 class="mb-0">Instagram</h5>
                   Siga a gente nas redes sociais.
                 </div>
               </li>
               <li class="d-flex gap-4">
-                <a href="https://www.facebook.com/profile.php?id=100093351835424" ><img src="static/imagens/facebook.png" class="bi text-body-secondary flex-shrink-0"  width="48" height="48"></a>
+                <a href="https://www.facebook.com/profile.php?id=100093351835424" ><img src="static/imagens/face.png" class="bi text-body-secondary flex-shrink-0"  width="48" height="48"></a>
                 <div>
                   <h5 class="mb-0">Facebook</h5>
                   Siga a gente nas redes sociais.
-                </div>
-              </li>
-              <li class="d-flex gap-4">
-                <img src="static/imagens/email.png" onclick="copiarTexto()" class="bi text-body-secondary flex-shrink-0"  width="48" height="48">
-                <div>
-                  <h5 class="mb-0">Email</h5>
-                  Siga a gente nas redes sociais.
+                
                   
                 </div>
               </li>
@@ -126,7 +120,7 @@
 <footer>
   <div class="row">
     <div class="col">
-      <div class="bg-warning">
+      <div class="bg-dark" data-bs-theme="dark">
         <div class="col">
           <div class="container">
             <ul class="nav justify-content-center border-bottom pb-1 mb-1">
@@ -139,11 +133,6 @@
             <div class="col">
               <div class="d-flex flex-column flex-sm-row justify-content-between ">
                 <p>&copy; 2023 Agrocity.</p>
-                  <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/sinal-do-twitter.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/facebook.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/agro_city23"><img src="static/imagens/instagram.png" width="24" height="24"></a></li>
-                  </ul>
               </div>
             </div>
         </div>

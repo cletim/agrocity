@@ -13,29 +13,29 @@
 <!-- menu -->
 <div class="row">
   <div class="col">
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" ><img src="static/imagens/logo.png" width="65" height="65"></a>
+        <a class="navbar-brand" ><img src="static/imagens/logocomletrabranca.png" width="65" height="65"></a>
         <div class="col">
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="cronograma.html">Programação</a>
+                <a class="nav-link disabled" href="{{ url_for('cronograma') }}">Programação</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="ingressos.html">Ingressos</a>
+                <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="local.html">Local</a>
+                <a class="nav-link active" href="{{ url_for('local') }}">Local</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="contato.html">Contato</a>
+                <a class="nav-link active" href="{{ url_for('contato') }}">Contato</a>
               </li>
             </ul>
           </div>  
@@ -44,7 +44,7 @@
             <div style="margin-right: -10px;">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
-                <button class="btn btn" type="submit"><img src="static/imagens/lupa.png" width="20" height="20"></button>
+                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20" height="20"></button>
               </form>
             </div>
           </div>
@@ -52,7 +52,7 @@
             <div style="margin-right: 40px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/17004.png" height="50" width="50"></a>
+                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png" height="50" width="50"></a>
                 </li>
               </ul>  
             </div>  
@@ -61,17 +61,16 @@
     </nav>
   </div>
 </div>
-<!-- IMAGEM -->
-<img src="static/imagens/7.png" class="img-fluid" alt="...">
+
 
 
 <!-- Ingressos -->
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="text-bg-warning me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
-        <h2 class="display-5">22/06</h2>
+        <h2 class="display-5">22/12</h2>
       </div>
-      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 650px; height: 300px; border-radius: 21px 21px 0 0;">
         <h5 class="mb-1">Programação</h5>
         <div>
           <div class="list-group">
@@ -83,9 +82,9 @@
             </a>
             <a class="list-group-item list-group-item-disabled">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Show</h5>
+                <h5 class="mb-1">Palestra</h5>
               </div class="text" >
-              <h1 class="lead" style="text-align: left;">Cantor Daniel as 20:00</h1>
+              <h1 class="lead" style="text-align: left;">Alexandre Mendonça de Barros</h1>
             </a>
           </div>
         </div>
@@ -94,9 +93,9 @@
     </div>
     <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 py-3">
-        <h2 class="display-5">23/06</h2>
+        <h2 class="display-5">23/12</h2>
       </div>
-      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 650px; height: 300px; border-radius: 21px 21px 0 0;">
         <h5 class="mb-1">Programação</h5>
         <div>
           <div class="list-group">
@@ -108,9 +107,9 @@
             </a>
             <a class="list-group-item list-group-item-disabled">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Show</h5>
+                <h5 class="mb-1">Palestra</h5>
               </div>
-              <p class="lead" style="text-align: left;">Cantor Guilherme e Benuto as 20:00</p>
+              <p class="lead" style="text-align: left;">Leo Montesanto</p>
             </a>
           </div>
         </div>
@@ -121,9 +120,9 @@
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
     <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
-        <h2 class="display-5">24/06</h2>
+        <h2 class="display-5">24/12</h2>
       </div>
-      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 650px; height: 300px; border-radius: 21px 21px 0 0;">
         <h5 class="mb-1">Programação</h5>
         <div>
           <div class="list-group">
@@ -135,9 +134,9 @@
             </a>
             <a class="list-group-item list-group-item-disabled">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Show</h5>
+                <h5 class="mb-1">Palestra</h5>
               </div>
-              <p class="lead" style="text-align: left;">Cantor Ana Castela as 20:00</p>
+              <p class="lead" style="text-align: left;">Marcelo Brito</p>
             </a>
           </div>
         </div>
@@ -145,9 +144,9 @@
     </div>
     <div class="text-bg-warning me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 py-3">
-        <h2 class="display-5">25/06</h2>
+        <h2 class="display-5">25/12</h2>
       </div>
-      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body-tertiary shadow-sm mx-auto text-dark" style="width: 650px; height: 300px; border-radius: 21px 21px 0 0;">
         <h5 class="mb-1">Programação</h5>
         <div>
           <div class="list-group">
@@ -159,9 +158,9 @@
             </a>
             <a class="list-group-item list-group-item-disabled">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Show</h5>
+                <h5 class="mb-1">Palestra</h5>
               </div>
-              <p class="lead" style="text-align: left;">Cantor Hugo e Guilherme as 20:00</p>
+              <p class="lead" style="text-align: left;">Vico Lasi</p>
             </a>
           </div>
         </div>
@@ -175,7 +174,7 @@
 <footer>
   <div class="row">
     <div class="col">
-      <div class="bg-warning">
+      <div class="bg-dark" data-bs-theme="dark">
         <div class="col">
           <div class="container">
             <ul class="nav justify-content-center border-bottom pb-1 mb-1">
@@ -188,11 +187,6 @@
             <div class="col">
               <div class="d-flex flex-column flex-sm-row justify-content-between ">
                 <p>&copy; 2023 Agrocity.</p>
-                  <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/sinal-do-twitter.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/facebook.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/agro_city23"><img src="static/imagens/instagram.png" width="24" height="24"></a></li>
-                  </ul>
               </div>
             </div>
         </div>

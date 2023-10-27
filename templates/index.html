@@ -14,29 +14,29 @@
 <!-- menu -->
 <div class="row">
   <div class="col">
-    <nav class="navbar navbar-expand-lg bg-success">
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" ><img src="static/imagens/logoagro-removebg-preview.png" width="65" height="65"></a>
+        <a class="navbar-brand" ><img src="static/imagens/logocomletrabranca.png" width="80" height="80"></a>
         <div class="col">
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link disabled" aria-current="page" href="{{ url_for('index') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="cronograma.html">Programação</a>
+                <a class="nav-link active" href="{{ url_for('cronograma') }}">Programação</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/ingressos">Ingressos</a>
+                <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="local.html">Local</a>
+                <a class="nav-link active" href="{{ url_for('local') }}">Local</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="contato.html">Contato</a>
+                <a class="nav-link active" href="{{ url_for('contato') }}">Contato</a>
               </li>
             </ul>
           </div>  
@@ -45,7 +45,7 @@
             <div style="margin-right: -10px;">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
-                <button class="btn btn" type="submit"><img src="static/imagens/lupa.png" width="20" height="20"></button>
+                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20" height="20"></button>
               </form>
             </div>
           </div>
@@ -53,7 +53,7 @@
             <div style="margin-right: 40px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/17004.png" height="50" width="50"></a>
+                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png" height="50" width="50"></a>
                 </li>
               </ul>  
             </div>  
@@ -72,18 +72,7 @@
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="static/imagens/Case-IH-reforca-sua-lideranca-em-Agricultura-Digital-na-Agrishow-2022-scaled.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="static/imagens/agricultura-sustentável.jpg"  class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
@@ -93,72 +82,61 @@
   </button>
 </div>
 
-<div class="row">
-  <div class="col">
-    <div class="card mb-3" style="width: 35rem; margin: 5px; margin-left: 150px; margin-top: 20px; background-color: #368455;">
-      <div class="card-body">
-        <h5 class="card-title">Exposição</h5>
-        <p class="card-text">No evento, dentre os maquinários agrícolas de exposição estarão lá: Trator Case Magnum AFS Connect 400, Pulverizador Stara Imperador 3.0, Uniporte 3030 NPK Jacto, Semeadora Valtra Momentum, Colhedora Case Axial-Flow 5130 e muitos outros.</p>
-        <a href="ingressos.html" class="btn btn-dark">Clique aqui</a>
+
+<div class="container">
+  <!-- Content here -->
+  <div class="row text-center">
+   <h2 style=" padding: 50px;">Tecnologias agrícolas</h2>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="static/imagens/sementes.jpg" width="400" height="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sementes</h5>
+          <p class="card-text">Através de ferramentas de biotecnologia é feita a manipulação dos genes de plantas de interesse econômico para obtenção de cultivares com características desejáveis, tais como resistência a estresse hídrico e a pragas e doenças e tolerância a solos ácidos.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card mb-3" style="width: 35rem; margin: 5px; margin-left: 150px; margin-top: 20px; background-color: #368455;">
-      <div class="card-body">
-        <h5 class="card-title">Programação</h5>
-        <p class="card-text">Neste ano, a feira será realizada nos dias 22 a 25 de junho no Parque do Peão Os Independentes, um espaço amplo preparado especialmente para receber os visitantes. Quem comparecer no evento terá a oportunidade de explorar as últimas tendências e inovações no mundo agrícola.</p>
-        <a href="cronograma.html" class="btn btn-dark">Clique aqui</a>
+    <div class="col">
+      <div class="card">
+        <img src="static/imagens/sensores17092019.jpg" width="400" height="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sensores</h5>
+          <p class="card-text"> Os sensores são dispositivos que detectam e indicam condições ambientais em áreas pequenas. Assim, cada planta será tratada conforme a necessidade indicada com auxílio dos sensores, são fundamentais em diversas etapas da produção e permitem enxergar a saúde da plantação.</p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<h2>Tecnologias agrícolas</h2>
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="static/imagens/sementes.jpg" width="400" height="400" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Sementes</h5>
-        <p class="card-text">Através de ferramentas de biotecnologia é feita a manipulação dos genes de plantas de interesse econômico para obtenção de cultivares com características desejáveis, tais como resistência a estresse hídrico e a pragas e doenças e tolerância a solos ácidos.</p>
+    <div class="col">
+      <div class="card">
+        <img src="static/imagens/drone.jpg" width="400" height="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Drones na agricultura</h5>
+          <p class="card-text">A partir do mapeamento aéreo, os drones melhoram a eficiência da aplicação de insumos para fertilizar o solo e controlar pragas e doenças nas lavouras, já que as ARPs permitem a pulverização com precisão e economia.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="static/imagens/sensores17092019.jpg" width="400" height="400" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Sensores</h5>
-        <p class="card-text"> Os sensores são dispositivos que detectam e indicam condições ambientais em áreas pequenas. Assim, cada planta será tratada conforme a necessidade indicada com auxílio dos sensores, são fundamentais em diversas etapas da produção e permitem enxergar a saúde da plantação.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="static/imagens/drone.jpg" width="400" height="400" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Drones na agricultura</h5>
-        <p class="card-text">A partir do mapeamento aéreo, os drones melhoram a eficiência da aplicação de insumos para fertilizar o solo e controlar pragas e doenças nas lavouras, já que as ARPs permitem a pulverização com precisão e economia.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="static/imagens/5G.jpg" width="400" height="400" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">5G na agricultura</h5>
-        <p class="card-text">Com o 5G na agricultura, será possível alcançar todo o potencial de equipamentos agrícolas. No Brasil, o mercado de máquinas rurais possui equipamentos novos e avançados, como plantio e colheita de máquinas com inteligência artificial e piloto automático que coletam dados ao vivo.</p>
+    <div class="col">
+      <div class="card">
+        <img src="static/imagens/5G.jpg" width="400" height="400" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">5G na agricultura</h5>
+          <p class="card-text">No Brasil, o mercado de máquinas rurais possui equipamentos novos e avançados, como plantio e colheita de máquinas com inteligência artificial e piloto automático que coletam dados ao vivo.</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- Footer -->
 
+
 <footer>
+  <p></p>
   <div class="row">
     <div class="col">
-      <div class="bg-success">
+      <div class="bg-dark" data-bs-theme="dark">
         <div class="col">
           <div class="container">
             <ul class="nav justify-content-center border-bottom pb-1 mb-1">
@@ -168,14 +146,10 @@
               <li class="nav-link active"><a href="local.html" class="nav-link px-2 text-body-secondary">Local</a></li>
               <li class="nav-link active"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
               </ul>
+            
             <div class="col">
               <div class="d-flex flex-column flex-sm-row justify-content-between ">
                 <p>&copy; 2023 Agrocity.</p>
-                  <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/sinal-do-twitter.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="static/imagens/facebook.png" width="24" height="24"></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/agro_city23"><img src="static/imagens/instagram.png" width="24" height="24"></a></li>
-                  </ul>
               </div>
             </div>
         </div>

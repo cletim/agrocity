@@ -16,13 +16,25 @@ def create_app(): # cria uma função para definir o aplicativo
 
     @app.route("/") # cria uma rota
     def index(): # função que gerencia rota
-        nome = "Pedro 123"
         return render_template("index.html") # combina o python com html
-
-    @app.route("/ingressos") # cria uma rota
-    def ingressos(): # função que gerencia rota
-        nome = "Pedro 123"
+    
+    @app.route("/ingressos")
+    def ingressos():
         return render_template("ingressos.html")
+    
+    @app.route("/cronograma")
+    def cronograma():
+        return render_template("cronograma.html")
+    
+    
+    @app.route("/local")
+    def local():
+        return render_template("local.html")
+    
+    @app.route("/contato")
+    def contato():
+        return render_template("contato.html")
+
     
     
     # from usuarios.controller import bp
@@ -32,6 +44,8 @@ def create_app(): # cria uma função para definir o aplicativo
     # app.register_blueprint(bp)
 
     return app # retorna o app criado
+
+    
 
 def init_db():
     # db.drop_all()
