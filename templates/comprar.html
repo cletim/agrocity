@@ -1,46 +1,135 @@
-<form>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Senha</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
-      </div>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/main.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+
+    <title>Formulário de cadastro</title>
+</head>
+
+
+
+<body>
+
+    <div class="row margin-height bg-warning">
+        <div class="col">
+          <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" ><img src="static/imagens/logocomletrabranca.png" width="80" height="80"></a>
+            <div class="col">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('cronograma') }}">Programação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('local') }}">Local</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('contato') }}">Contato</a>
+                        </li>
+                    </ul>
+                </div>  
+            </div>
+                <div class="col">
+                  <div style="margin-right: -10px;">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
+                      <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20" height="20"></button>
+                    </form>
+                  </div>
+                </div>
+                <div class="col">
+                  <div style="margin-right: 40px;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png" height="50" width="50"></a>
+                      </li>
+                    </ul>  
+                  </div>  
+                </div>
+            </div>
+        </nav>
+
+          <p></p>
+        <div class="container">
+            <div class="form-image">
+                <img src="static/imagens/cadastro.svg">
+            </div>
+            <div class="form">
+                <form action="#">
+                    <div class="for-header">
+                        <div class="title">
+                            <h1>Cadastre-se</h1>
+                        </div>
+                        <div class="login-button">
+                            <button><a href="#"> Entrar</a></button>
+                        </div>
+                    </div>
+                
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Primeiro nome</label>
+                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="lastname">Sobrenome</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        </div>
+                    
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Digite seu email" required>
+                        </div>
+                    
+                        <div class="input-box">
+                            <label for="number">CPF</label>
+                            <input id="number" type="text" name="number" placeholder="Digite seu CPF" required>
+                        </div>
+                    
+                        <div class="gender-inputs">
+                            <div class="gender-title">
+                                <h6>Palestra</h6>
+                            </div>
+                            
+                         
+                              
+                              <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <option selected>Escolha</option>
+                                <option value="1">Alexandre Mendonça de Barros</option>
+                                <option value="2">Leo Montesanto</option>
+                                <option value="3">Marcelo Brito</option>
+                                <option value="4">Vico Lasi</option>
+
+                              </select>
+                        </div>
+                    <div class="continue-button">
+                        <button><a href="#">Continuar</a></button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-      <label for="inputAddress">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Endereço 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">Cidade</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputEstado">Estado</label>
-        <select id="inputEstado" class="form-control">
-          <option selected>Escolher...</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputCEP">CEP</label>
-        <input type="text" class="form-control" id="inputCEP">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Clique em mim
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Entrar</button>
-  </form>
+    
+
+    
+</body>
+
+
+</html>
