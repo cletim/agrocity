@@ -1,77 +1,5 @@
-<html>
-
-<link rel="stylesheet" href="static/css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css"
-  integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
-<script src="../assets/js/color-modes.js"></script>
-<link href="biblioteca/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Titulo -->
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agro City</title>
-</head>
-
-
-<body>
-
-  <!-- Menu -->
-
-  <div class="row">
-    <div class="col">
-      <nav class="navbar navbar-expand-lg bg-success">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand"><img src="static/imagens/logo.png" width="65" height="65"></a>
-          <div class="col">
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="cronograma.html">Programação</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="ingressos.html">Ingressos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="local.html">Local</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="contato.html">Contato</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col">
-            <div style="margin-right: -10px;">
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
-                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20"
-                    height="20"></button>
-              </form>
-            </div>
-          </div>
-          <div class="col">
-            <div style="margin-right: 40px;">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/17004.png"
-                      height="50" width="50"></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </div>
+{% extends 'layout.html' %}
+{% block content %}
 
   <!-- login -->
 
@@ -141,7 +69,6 @@
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </html>
+{% endblock %}
