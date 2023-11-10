@@ -39,8 +39,10 @@ def create_app(): # cria uma função para definir o aplicativo
     def comprar():
         return render_template("comprar.html")
 
-
-    
+    @app.route("/pagamento")
+    def pagamento():
+        return render_template("pagamento.html")
+        
     
     # from usuarios.controller import bp
     # app.register_blueprint(bp)

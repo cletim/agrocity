@@ -1,7 +1,8 @@
 <html>
-  <link href="static/css/features.css" rel="stylesheet">
-<link rel="stylesheet" href="static/css/main.css" >
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+<link href="static/css/features.css" rel="stylesheet">
+<link rel="stylesheet" href="static/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css"
+  integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
 
 <head>
   <meta charset="utf-8">
@@ -10,43 +11,45 @@
 </head>
 
 <body>
-  
-<!-- menu -->
 
-<div class="row">
-  <div class="col">
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" ><img src="static/imagens/logocomletrabranca.png" width="65" height="65"></a>
-        <div class="col">
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="{{ url_for('cronograma') }}">Programação</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="{{ url_for('local') }}">Local</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="{{ url_for('contato') }}">Contato</a>
-              </li>
-            </ul>
-          </div>  
-        </div>
+  <!-- menu -->
+
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand"><img src="static/imagens/logocomletrabranca.png" width="65" height="65"></a>
+          <div class="col">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03" style="margin-right: 600px;">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{{ url_for('cronograma') }}">Programação</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{{ url_for('ingressos') }}">Ingressos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="{{ url_for('local') }}">Local</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{{ url_for('contato') }}">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="col">
             <div style="margin-right: -10px;">
               <form class="d-flex" role="search">
                 <input class="form-control me-2" type="Procurar" placeholder="Procurar" aria-label="Procurar">
-                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20" height="20"></button>
+                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp" width="20"
+                    height="20"></button>
               </form>
             </div>
           </div>
@@ -54,17 +57,18 @@
             <div style="margin-right: 40px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png" height="50" width="50"></a>
+                  <a class="nav-link active" aria-current="page" href="login.html"><img src="static/imagens/usuario.png"
+                      height="50" width="50"></a>
                 </li>
-              </ul>  
-            </div>  
+              </ul>
+            </div>
           </div>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </div>
   </div>
-</div>
 
-<!-- carosel -->
+  <!-- carosel -->
 
 
 
@@ -77,14 +81,19 @@
 
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/imagens/entrada.jpg'); background-repeat: no-repeat; background-size: 405px;">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('static/imagens/entrada.jpg'); background-repeat: no-repeat; background-size: 405px;">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
             <ul class="d-flex list-unstyled mt-auto">
               <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill" />
+                </svg>
               </li>
               <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3" />
+                </svg>
               </li>
             </ul>
           </div>
@@ -92,15 +101,21 @@
       </div>
 
       <div class="col">
-        <a href="https://www.google.com/maps/place/Parque+do+Pe%C3%A3o+Os+Independentes/@-20.5096347,-48.6006434,15z/data=!4m6!3m5!1s0x94bb8382ebc31129:0x63001f0ed6630e7b!8m2!3d-20.5096347!4d-48.6006434!16s%2Fg%2F1ptwkjlxj?hl=pt-BR&entry=ttu">
-          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/imagens/barretos1.jpg'); background-repeat: no-repeat; background-size: 410px;">
+        <a
+          href="https://www.google.com/maps/place/Parque+do+Pe%C3%A3o+Os+Independentes/@-20.5096347,-48.6006434,15z/data=!4m6!3m5!1s0x94bb8382ebc31129:0x63001f0ed6630e7b!8m2!3d-20.5096347!4d-48.6006434!16s%2Fg%2F1ptwkjlxj?hl=pt-BR&entry=ttu">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('static/imagens/barretos1.jpg'); background-repeat: no-repeat; background-size: 410px;">
             <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
               <ul class="d-flex list-unstyled mt-auto">
                 <li class="d-flex align-items-center me-3">
-                  <svg class="bi me-2" width="50px" height="50px"><use xlink:href="#geo-fill"/></svg>
+                  <svg class="bi me-2" width="50px" height="50px">
+                    <use xlink:href="#geo-fill" />
+                  </svg>
                 </li>
                 <li class="d-flex align-items-center">
-                  <svg class="bi me-2" width="50x" height="50px"><use xlink:href="#calendar3"/></svg>
+                  <svg class="bi me-2" width="50x" height="50px">
+                    <use xlink:href="#calendar3" />
+                  </svg>
                 </li>
               </ul>
             </div>
@@ -109,15 +124,20 @@
       </div>
 
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('static/imagens/festa.jpg'); background-repeat: no-repeat; background-size: 410px;">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+          style="background-image: url('static/imagens/festa.jpg'); background-repeat: no-repeat; background-size: 410px;">
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
             <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold"></h3>
             <ul class="d-flex list-unstyled mt-auto">
               <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill" />
+                </svg>
               </li>
               <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3" />
+                </svg>
               </li>
             </ul>
           </div>
@@ -140,22 +160,26 @@
           <div class="container">
             <ul class="nav justify-content-center border-bottom pb-1 mb-1">
               <li class="nav-link disabled"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-              <li class="nav-link active"><a href="cronograma.html" class="nav-link px-2 text-body-secondary">Programação</a></li>
-              <li class="nav-link active"><a href="ingressos.html" class="nav-link px-2 text-body-secondary">Ingressos</a></li>
+              <li class="nav-link active"><a href="cronograma.html"
+                  class="nav-link px-2 text-body-secondary">Programação</a></li>
+              <li class="nav-link active"><a href="ingressos.html"
+                  class="nav-link px-2 text-body-secondary">Ingressos</a></li>
               <li class="nav-link active"><a href="local.html" class="nav-link px-2 text-body-secondary">Local</a></li>
-              <li class="nav-link active"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a></li>
+              <li class="nav-link active"><a href="contato.html" class="nav-link px-2 text-body-secondary">Contato</a>
+              </li>
             </ul>
             <div class="col">
               <div class="d-flex flex-column flex-sm-row justify-content-between ">
                 <p>&copy; 2023 Agrocity.</p>
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
+</html>
