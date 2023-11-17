@@ -1,17 +1,19 @@
-import click
-from flask import Flask, render_template
+import click 
+from flask import Flask, render_template, request, url_for, redirect, flash
 from flask.cli import with_appcontext
-# from database.connection import db
+from sqlalchemy import select
+from database.connection import db
+from model import Cliente
 
 
 def create_app(): # cria uma função para definir o aplicativo
     app = Flask(__name__) # instancia o Flask
     app.secret_key = "abax"
     
-    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqldb://root:5e5i_123@localhost:3306/flaskola"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+mysqldb://root:5e5i_123@localhost:3306/dataagrocity"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-    # db.init_app(app)
+    db.init_app(app)
     app.cli.add_command(init_db_command)
 
     @app.route("/") # cria uma rota
@@ -35,13 +37,44 @@ def create_app(): # cria uma função para definir o aplicativo
     def contato():
         return render_template("contato.html")
     
-    @app.route("/comprar")
+    @app.route("/comprar", methods=("GET", "POST"))
     def comprar():
-        return render_template("comprar.html")
+
+        erros=[]
+
+        if request.method=="POST":
+            nome = request.form.get("firstname")
+            email = request.form.get("email")
+            telefone = request.form.get("telefone")
+            cpf = request.form.get("cpf")
+            palestra = request.form.get("palestra")
+
+            
+            if not nome: erros.append("Nome é um campo obrigatório")
+            if not email: erros.append("Email é um campo obrigatório")
+            if not telefone: erros.append("Trabalho é um campo obrigatório ou valores não entre 0-10")
+            if not cpf: erros.append("Prova 1 é um campo obrigatório ou valores não entre 0-10")
+            if not palestra: erros.append("Prova 2 é um campo obrigatório ou valores não entre 0-10")
+
+            if len(erros) == 0:
+                # salva usuário no banco de dados
+                cliente = Cliente(**{"nome": nome, "email": email, "telefone": telefone, "cpf": cpf, "palestra": palestra })
+                db.session.add(cliente)
+                db.session.commit() # persiste no banco
+                flash(f"Usuário {nome}, salvo com sucesso!")
+
+                return redirect(url_for("pagamento", id=cliente.idcliente))
+        
+        return render_template("comprar.html", erros=erros)
 
     @app.route("/pagamento")
     def pagamento():
         return render_template("pagamento.html")
+    
+    @app.route("/test")
+    def test():
+        lista = db.session.scalars(select(Cliente))
+        return render_template("test.html", lista = lista) 
         
     
     # from usuarios.controller import bp

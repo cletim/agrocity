@@ -49,26 +49,6 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col">
-                        <div style="margin-right: -10px;">
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="Procurar" placeholder="Procurar"
-                                    aria-label="Procurar">
-                                <button class="btn btn" type="submit"><img src="static/imagens/lupabranca.webp"
-                                        width="20" height="20"></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div style="margin-right: 40px;">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="login.html"><img
-                                            src="static/imagens/usuario.png" height="50" width="50"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </nav>
 
@@ -78,7 +58,7 @@
                     <img src="static/imagens/cadastro.svg">
                 </div>
                 <div class="form">
-                    <form action="#">
+                    <form method="post" action="#">
                         <div class="for-header">
                             <div class="title">
                                 <h1>Cadastre-se</h1>
@@ -93,8 +73,8 @@
                             </div>
 
                             <div class="input-box">
-                                <label for="lastname">Sobrenome</label>
-                                <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome"
+                                <label for="telefone">Telefone</label>
+                                <input id="telefone" type="text" name="telefone" placeholder="(DDD)00000-0000"
                                     required>
                             </div>
 
@@ -104,28 +84,25 @@
                             </div>
 
                             <div class="input-box">
-                                <label for="number">CPF</label>
-                                <input id="number" type="text" name="number" placeholder="Digite seu CPF" required>
+                                <label for="cpf">CPF</label>
+                                <input id="cpf" type="text" name="cpf" placeholder="000.000.000-00" required>
                             </div>
 
                             <div class="gender-inputs">
                                 <div class="gender-title">
                                     <h6>Palestra</h6>
                                 </div>
-
-
-
-                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="palestra">
                                     <option selected>Escolha</option>
-                                    <option value="1">Alexandre Mendonça de Barros</option>
-                                    <option value="2">Leo Montesanto</option>
-                                    <option value="3">Marcelo Brito</option>
-                                    <option value="4">Vico Lasi</option>
+                                    <option >Alexandre Mendonça de Barros</option>
+                                    <option >Leo Montesanto</option>
+                                    <option >Marcelo Brito</option>
+                                    <option >Vico Lasi</option>
 
                                 </select>
                             </div>
                             <div class="continue-button">
-                                <button><a href="{{ url_for('pagamento') }}">Continuar</a></button>
+                                <button class="btn btn-primary" type="submit">Continuar</button>
                             </div>
                             
 
